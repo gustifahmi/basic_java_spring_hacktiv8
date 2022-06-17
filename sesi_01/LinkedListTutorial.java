@@ -1,5 +1,3 @@
-package sesi_01;
-
 import java.util.LinkedList;
 
 public class LinkedListTutorial {

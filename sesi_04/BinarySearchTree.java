@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 //Object Tree
 class Tree {
     //Private attribute yang menyimpan node root
