@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+    <user id="100">
+        <firstname>Monkey D.</firstname>
+        <lastname>Luffy</lastname>
+    </user>
+    <user id="101">
+        <firstname>Roronoa</firstname>
+        <lastname>Zoro</lastname>
+    </user>
+    <user id ="102">
+        <firstname>Vinsmoke</firstname>
+        <lastname>Sanji</lastname>
+    </user>
+</users>
