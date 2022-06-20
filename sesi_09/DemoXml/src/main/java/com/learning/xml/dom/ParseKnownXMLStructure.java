@@ -2,13 +2,8 @@ package com.learning.xml.dom;
 
 import java.io.File;
 
-import javax.xml.XMLConstants;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.validation.Schema;
-import javax.xml.validation.SchemaFactory;
-import javax.xml.validation.Validator;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -37,29 +32,12 @@ public class ParseKnownXMLStructure {
         //Normalize XML Structure
         document.getDocumentElement().normalize();
 
-        //Validasi struktur dokumen
-        Schema schema = null;
-        String language = XMLConstants.W3C_XML_SCHEMA_NS_URI;
-        SchemaFactory schemaFactory = SchemaFactory.newInstance(language);
-        try {
-            schema = schemaFactory.newSchema(new File("src/main/java/com/learning/xml/dom/employees.xml"));
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
-
-        Validator validator = schema.newValidator();
-        try {
-            validator.validate(new DOMSource(document));
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
-
         //Root node
         Element root = document.getDocumentElement();
-        System.out.println(root.getNodeName());
+        System.out.println("\n" + root.getNodeName());
 
         //Get all employees
-        NodeList nList = document.getElementsByTagName("employees");
+        NodeList nList = document.getElementsByTagName("employee");
         System.out.println("====================");
 
         for(int i = 0; i < nList.getLength(); i++) {
@@ -69,9 +47,9 @@ public class ParseKnownXMLStructure {
             if(node.getNodeType() == Node.ELEMENT_NODE) {
                 Element eElement = (Element)node;
                 System.out.println("Employee ID: " + eElement.getAttribute("id"));
-                System.out.println("First Name: " + eElement.getAttribute("firstName"));
-                System.out.println("First Name: " + eElement.getAttribute("lastName"));
-                System.out.println("First Name: " + eElement.getAttribute("location"));
+                System.out.println("First Name: " + eElement.getElementsByTagName("firstname").item(0).getTextContent());
+                System.out.println("Last Name: " + eElement.getElementsByTagName("lastname").item(0).getTextContent());
+                System.out.println("Location: " + eElement.getElementsByTagName("location").item(0).getTextContent());
             }
         }
     }
