@@ -2,9 +2,11 @@ com\learning\xml\sax\MyRunner.class
 com\learning\xml\sax\MyHandler.class
 com\learning\xml\challenge1\MyHandler.class
 com\learning\xml\challenge1\MyRunner.class
+com\learning\xml\challenge2\ReadXmlAlexaApi.class
 com\learning\xml\sax\User.class
 com\learning\xml\App.class
 com\learning\xml\sax\JavaReadXmlSaxEx.class
 com\learning\xml\dom\Employee.class
 com\learning\xml\challenge1\JavaReadXmlSaxEx.class
 com\learning\xml\challenge1\User.class
+com\learning\xml\dom\ParseKnownXMLStructure.class

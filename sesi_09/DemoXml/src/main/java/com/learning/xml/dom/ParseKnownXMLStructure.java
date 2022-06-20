@@ -24,7 +24,7 @@ public class ParseKnownXMLStructure {
         //Build document
         Document document = null;
         try {
-            document = builder.parse(new File("src/main/java/com/learning/xml/dom/employees.xml"));
+            document = builder.parse(new File("src/main/resources/employees.xml"));
         } catch(Exception e) {
             e.printStackTrace();
         }

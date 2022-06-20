@@ -39,7 +39,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>com.learning.thread.App</mainClass>
+              <mainClass>com.learning.xml.App</mainClass>
             </manifest>
           </archive>
         </configuration>
