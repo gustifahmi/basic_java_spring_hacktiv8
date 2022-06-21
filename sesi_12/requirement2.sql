@@ -161,7 +161,15 @@ GROUP BY wo.employee_ssn
 HAVING number_of_project = 4;
 
 --View l
-
+CREATE VIEW 70_hours_multiple_project AS
+SELECT e.first_name, e.middle_name, e.last_name, AVG(wo.hours) AS average_hours,
+COUNT(wo.project_number) AS number_of_project
+FROM tb_employee e
+JOIN tb_works_on wo
+ON e.ssn = wo.employee_ssn
+GROUP BY wo.employee_ssn
+HAVING number_of_project >= 2
+AND average_hours > 70;
 
 --View m
 CREATE VIEW number_of_relationship AS
