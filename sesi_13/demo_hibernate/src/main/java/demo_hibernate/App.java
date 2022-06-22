@@ -16,8 +16,8 @@ public class App {
 		
 		AddressBook emp = new AddressBook();
 		
-		emp.setId(1); emp.setName("arif");
-		emp.setAddress("depok");
+		emp.setId(1); emp.setName("Fahmi");
+		emp.setAddress("Jakarta");
 		session.save(emp);
 		
 		tx.commit();

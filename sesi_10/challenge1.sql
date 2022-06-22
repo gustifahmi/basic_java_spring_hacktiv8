@@ -39,7 +39,7 @@ CREATE TABLE tb_gaji(
     id_pegawai int NOT NULL,
     gaji int NOT NULL,
     tanggal_gaji DATE NOT NULL,
-    FOREIGN KEY (id_pegawai) REFERENCES tb_pegawai(id_pegawai)
+    FOREIGN KEY(id_pegawai) REFERENCES tb_pegawai(id_pegawai)
 );
 
 --Membuat tabel transaksi
@@ -49,9 +49,9 @@ CREATE TABLE tb_transaksi(
     id_menu int NOT NULL,
     id_pegawai int NOT NULL,
     tanggal_transaksi DATE NOT NULL,
-    FOREIGN KEY (id_pembeli) REFERENCES tb_pembeli(id_pembeli),
-    FOREIGN KEY (id_menu) REFERENCES tb_menu(id_menu),
-    FOREIGN KEY (id_pegawai) REFERENCES tb_pegawai(id_pegawai)
+    FOREIGN KEY(id_pembeli) REFERENCES tb_pembeli(id_pembeli),
+    FOREIGN KEY(id_menu) REFERENCES tb_menu(id_menu),
+    FOREIGN KEY(id_pegawai) REFERENCES tb_pegawai(id_pegawai)
 );
 
 --Menambahkan data ke tabel pegawai
