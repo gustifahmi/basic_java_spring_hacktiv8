@@ -54,5 +54,8 @@ public class OperatorAritmatika {
 
         hasil = angka1 % angka2;
         System.out.println("Sisa Bagi = " + hasil);
+
+        //Close scanner
+        keyboard.close();
     }
 }

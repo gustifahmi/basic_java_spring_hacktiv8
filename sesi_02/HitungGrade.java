@@ -32,5 +32,8 @@ public class HitungGrade {
 
         //Print grade
         System.out.printf("Grade: %s\n", grade);
+
+        //Close scanner
+        scan.close();
     }
 }

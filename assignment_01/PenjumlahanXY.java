@@ -42,5 +42,8 @@ public class PenjumlahanXY {
 
         //Kasih satu baris
         System.out.println();
+
+        //Close scanner
+        scan.close();
     }
 }

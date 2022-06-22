@@ -76,5 +76,8 @@ public class SelectionSort {
             }
         }
         System.out.print("]");
+
+        //Close scanner
+        scan.close();
     }
 }

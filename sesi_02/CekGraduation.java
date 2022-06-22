@@ -21,5 +21,8 @@ public class CekGraduation {
         } else {
             System.out.printf("Maaf %s, anda gagal\n", nama);
         }
+
+        //Close scanner
+        scan.close();
     }
 }

@@ -12,6 +12,9 @@ public class HitungDiskon {
         //Panggil function hitungPembayaran
         int pembayaran = hitungPembayaran(pembelian);
         System.out.printf("Total pembayaran sebesar: %d", pembayaran);
+
+        //Close scanner
+        scan.close();
     }
 
     //Function hitungPembayaran

@@ -21,5 +21,8 @@ public class Profesi {
         for(String namaProfesi: profesi) {
             System.out.println(namaProfesi);
         }
+
+        //Close scanner
+        scan.close();
     }
 }

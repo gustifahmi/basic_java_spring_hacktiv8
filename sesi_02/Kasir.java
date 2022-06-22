@@ -32,5 +32,8 @@ public class Kasir {
 
         //Print jumlah pembayaran
         System.out.printf("Total Bayar: Rp %d", (belanjaan - diskon));
+
+        //Close scanner
+        scan.close();
     }
 }

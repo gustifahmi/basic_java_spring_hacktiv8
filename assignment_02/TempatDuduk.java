@@ -42,5 +42,8 @@ public class TempatDuduk {
             System.out.println();
         }
         System.out.println("==============================");
+
+        //Close scanner
+        scan.close();
     }
 }

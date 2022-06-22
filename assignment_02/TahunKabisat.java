@@ -18,6 +18,9 @@ public class TahunKabisat {
         } else {
             System.out.println("Tahun tersebut bukan tahun kabisat");
         }
+
+        //Close scanner
+        scan.close();
     }
 
     //Periksa apakah tahun kabisat atau bukan

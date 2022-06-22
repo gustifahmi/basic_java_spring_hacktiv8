@@ -7,7 +7,6 @@ public class LuasLingkaran {
         double pi = 3.14;
 
         //Inisiasi variabel kosong, yairtu luas dan r(jari-jari)
-        double luas;
         int r;
 
         //Jalankan scanner
@@ -19,5 +18,8 @@ public class LuasLingkaran {
 
         //Print luas lingkaran
         System.out.printf("Luas lingkaran sebesar %.2f\n", (pi * Math.pow(r, 2)));
+
+        //Close scanner
+        scan.close();
     }
 }

@@ -59,5 +59,8 @@ public class BinarySearch {
         } else {
             System.out.println("Angka tidak ada di dalam list");
         }
+
+        //Close scanner
+        scan.close();
     }
 }

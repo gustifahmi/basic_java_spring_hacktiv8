@@ -215,7 +215,7 @@ public class LatihanObjek {
         PersegiPanjang persegiPanjang = new PersegiPanjang(panjangPersegiPanjang, lebarPersegiPanjang);
 
         System.out.printf("Panjang: %.2f, Lebar: %.2f, Luas: %.2f, Keliling: %.2f\n", 
-        panjangPersegiPanjang, lebarPersegiPanjang, lingkaran.getLuas(), lingkaran.getKeliling());
+        panjangPersegiPanjang, lebarPersegiPanjang, persegiPanjang.getLuas(), persegiPanjang.getKeliling());
 
         //Segitiga
         float alasSegitiga = 6;

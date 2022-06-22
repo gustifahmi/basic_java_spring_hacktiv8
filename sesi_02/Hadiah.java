@@ -17,6 +17,10 @@ public class Hadiah {
             System.out.printf("\nSelamat, anda mendapatkan hadiah!\n");
         }
 
+        //Print terima kasih
         System.out.println("Terima kasih...");
+
+        //Close scanner
+        scan.close();
     }
 }

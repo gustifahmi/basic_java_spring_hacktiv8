@@ -33,5 +33,8 @@ public class PerulanganWhile {
 
         //Print jumlah perulangan
         System.out.printf("Anda sudah melakukan perulangan sebanyak %d kali\n", counter);
+
+        //Close scanner
+        scan.close();
     }
 }

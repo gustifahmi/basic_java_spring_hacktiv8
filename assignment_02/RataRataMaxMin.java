@@ -40,6 +40,9 @@ public class RataRataMaxMin {
 
         //Bilangan terkecil
         System.out.printf("%d adalah bilangan terkecil\n", arrayBilangan[0]);
+
+        //Close scanner
+        scan.close();
     }
 
     //function untuk menghitung rata-rata

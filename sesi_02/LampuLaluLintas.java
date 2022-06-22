@@ -26,5 +26,8 @@ public class LampuLaluLintas {
             default:
                 System.out.println("Warna lampu salah!");
         }
+
+        //Close scanner
+        scan.close();
     }
 }

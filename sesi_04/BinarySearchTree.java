@@ -121,6 +121,9 @@ public class BinarySearchTree {
                 System.out.println("\nPerintah tidak dikenal, silahkan coba lagi");
             }
         }
+        
+        //Close scanner
+        scan.close();
     }
 
     //Masukkan node baru ke dalam tree

@@ -128,6 +128,9 @@ public class PointOfSale {
 
         //Print total bayar
         System.out.printf("\nTotal Bayar: Rp %.2f\n\n", total);
+
+        //Close scanner
+        scan.close();
     }
 }
 
