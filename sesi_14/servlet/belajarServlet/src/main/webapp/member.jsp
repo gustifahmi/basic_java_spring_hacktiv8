@@ -43,7 +43,7 @@
 	</style>
 </head>
 
-<jsp:useBean id="member" scope="session" class="com.welcome.model.Member" />
+<jsp:useBean id="member" scope="session" class="com.belajar.model.Member" />
 <body>
 	<div class="container">
 		<table style="margin: auto; width: 50%;">

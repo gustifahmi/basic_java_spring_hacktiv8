@@ -21,9 +21,9 @@ public class HelloServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		resp.getWriter().append("Served at: ").append(req.getContextPath());
 		
-		response.setContentType("text/html");
+		resp.setContentType("text/html");
         
-		PrintWriter out = response.getWriter();
+		PrintWriter out = resp.getWriter();
 
 		out.print("<html><body>");
 		out.print("<h2>Selamat Belajar</h2>");
