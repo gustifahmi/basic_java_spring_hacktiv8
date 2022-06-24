@@ -68,6 +68,7 @@
 		    <artifactId>validation-api</artifactId>
 		  </dependency>
 	</dependencies>
+	
 	<profiles>
 		<profile>
 			<id>pom.xml</id>

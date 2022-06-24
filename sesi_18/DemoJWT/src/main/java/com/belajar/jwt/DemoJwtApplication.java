@@ -1,14 +1,13 @@
-package com.belajar.main;
+package com.belajar.jwt;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DemospringApplication {
+public class DemoJwtApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemospringApplication.class, args);
-		System.out.println("Hello World!");
+		SpringApplication.run(DemoJwtApplication.class, args);
 	}
 
 }

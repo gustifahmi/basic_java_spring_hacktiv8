@@ -1,9 +1,9 @@
-package com.belajar.controller;
+package com.belajar.spring.controller;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class HelloController {
     @RequestMapping("/hello")
     public String hello() {
