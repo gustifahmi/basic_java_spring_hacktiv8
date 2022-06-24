@@ -42,3 +42,7 @@ server berhasil berjalan, kita bisa jalankan aplikasi dengan klik kanan pada fol
 belajarServlet -> Run As -> Run On Server -> pilih server yang tadi sudah berjalan -> Next -> Finish.
 Selanjutnya akan masuk ke halaman login yang diambil dari index.jsp, lalu masukkan username
 dan password, lalu akan masuk halaman dari member.jsp
+
+Selanjutnya, saya juga belajar untuk membuat sebuah proyek Spring Boot. Untuk membuat sebuah
+proyek baru Spring Boot dapat dilakukan di web start.spring.io atau bisa juga melalui Eclipse.
+Saya memilih untuk membuat di Eclipse dengan klik File -> New -> Spring Starter Project

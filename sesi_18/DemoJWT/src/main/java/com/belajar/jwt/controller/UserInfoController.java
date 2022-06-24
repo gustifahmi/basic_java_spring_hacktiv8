@@ -27,7 +27,7 @@ public class UserInfoController {
 	@PostMapping("/user")
 	public Boolean create(@RequestBody Map<String, String> body) throws NoSuchAlgorithmException, ValidationException {
 		String username = body.get("username");
-		if(userInfoRepository.existByUsername(username)) {
+		if(userInfoRepository.findByUsername(username) != null) {
 			throw new ValidationException("Username already existed");
 		}
 		
