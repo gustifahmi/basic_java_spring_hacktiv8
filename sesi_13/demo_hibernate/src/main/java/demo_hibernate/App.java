@@ -3,11 +3,11 @@ package demo_hibernate;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.cfg.AnnotationConfiguration;
+import org.hibernate.cfg.Configuration;
 
 public class App {
 	public static void main(String[] args) {
-		SessionFactory sessionFactory = new AnnotationConfiguration()
+		SessionFactory sessionFactory = new Configuration()
 				.configure().buildSessionFactory();
 		
 		Session session = sessionFactory.getCurrentSession();
@@ -16,9 +16,9 @@ public class App {
 		
 		AddressBook emp = new AddressBook();
 		
-		emp.setId(1); emp.setName("Fahmi");
+		emp.setName("Fahmi");
 		emp.setAddress("Jakarta");
-		session.save(emp);
+		session.persist(emp);
 		
 		tx.commit();
 	}

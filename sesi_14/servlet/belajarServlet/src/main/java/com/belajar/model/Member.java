@@ -5,7 +5,6 @@ public class Member {
     private String password;
     
     public Member() {
-    	
     }
     
     public String getPassword() {

@@ -10,7 +10,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Book")
+@Table(name = "book")
 public class Book {
 	
 	@Id
@@ -27,7 +27,7 @@ public class Book {
 	private String isbn;
 	
 	@ManyToOne
-	@JoinColumn
+	@JoinColumn(name = "bookId")
 	private BookCategory bookCategory;
 
 	public Book() {

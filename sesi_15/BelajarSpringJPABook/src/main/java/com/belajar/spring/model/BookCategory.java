@@ -1,5 +1,6 @@
 package com.belajar.spring.model;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -7,6 +8,7 @@ import java.util.stream.Stream;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -24,7 +26,7 @@ public class BookCategory {
 	@Column(name = "name", nullable = false)
 	private String name;
 	
-	@OneToMany(mappedBy = "bookCategory", cascade = CascadeType.MERGE)
+	@OneToMany(mappedBy = "bookCategory", fetch = FetchType.LAZY, cascade = CascadeType.MERGE, targetEntity = Book.class)
 	private List<Book> books;
 	
 	public BookCategory() {
@@ -32,8 +34,11 @@ public class BookCategory {
 	
 	public BookCategory(String name, Book... books) {
 		this.name = name;
-		this.books = Stream.of(books).collect(Collectors.toList());
-		this.books.forEach(x -> x.setBookCategory(this));
+		List<Book> newBooks = Stream.of(books).collect(Collectors.toList());
+		for(int i = 0; i < newBooks.size(); i++) {
+			Book book = newBooks.get(i);
+			addBook(book);
+		}
 	}
 
 	public void setId(Long id) {
@@ -42,10 +47,6 @@ public class BookCategory {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public void setBooks(List<Book> books) {
-		this.books = books;
 	}
 
 	public Long getId() {
@@ -58,6 +59,14 @@ public class BookCategory {
 
 	public List<Book> getBooks() {
 		return books;
+	}
+	
+	public void addBook(Book book) {
+		if(this.books == null) {
+			this.books = new ArrayList<>(); 
+		}
+		book.setBookCategory(this);
+		this.books.add(book);
 	}
 	
 	public String toString() {
