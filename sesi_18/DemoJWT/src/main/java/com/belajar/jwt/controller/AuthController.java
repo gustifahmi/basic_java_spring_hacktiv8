@@ -38,10 +38,6 @@ public class AuthController {
 	@Autowired
 	private JwtUserDetailsService jwtUserDetailsService;
 	
-	@Operation(summary = "Authenticate", description = "Authenticate user credentials", tags = {"authenticate"})
-	@ApiResponses(value = {
-			@ApiResponse(responseCode = "200", description = "succesful operation",
-					content = @Content(schema = @Schema(implementation = JwtResponse.class)))})
 	@PostMapping("/authenticate")
 	public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtRequest authenticationRequest) throws Exception {
 		authenticate(authenticationRequest.getUsername(), authenticationRequest.getPassword());

@@ -29,34 +29,37 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	@Autowired
 	private JwtRequestFilter jwtRequestFilter;
+
+	@Autowired
+	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+		auth.userDetailsService(jwtUserDetailsService).passwordEncoder(passwordEncoder());
+	}
+
+	@Bean
+	public JwtAuthenticationEntryPoint jwtAuthenticationEntryPointBean() throws Exception {
+		return new JwtAuthenticationEntryPoint();
+	}
+
+	@Bean
+	public PasswordEncoder passwordEncoder() {
+		return new BCryptPasswordEncoder();
+	}
+
+	@Bean
+	@Override
+	public AuthenticationManager authenticationManagerBean() throws Exception {
+		return super.authenticationManagerBean();
+	}
 	
+	@Override
 	protected void configure(HttpSecurity httpSecurity) throws Exception {
-		httpSecurity.csrf().disable().authorizeRequests(). antMatchers("/authenticate", "/user").
+		httpSecurity.csrf().disable().authorizeRequests().antMatchers("/authenticate", "/user").
 		permitAll().anyRequest().authenticated().and().exceptionHandling().
 		authenticationEntryPoint(jwtAuthenticationEntryPoint).and().sessionManagement().
 		sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 		
 		httpSecurity.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
-	}
-	
-	@Autowired
-	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-		auth.userDetailsService(jwtUserDetailsService).passwordEncoder(passwordEncoder());
-	}
-	
-	@Bean
-	public JwtAuthenticationEntryPoint jwtAuthenticationEntryPointBean() throws Exception {
-		return new JwtAuthenticationEntryPoint();
-	}
-	
-	@Bean
-	public PasswordEncoder passwordEncoder() {
-		return new BCryptPasswordEncoder();
-	}
-	
-	@Bean
-	@Override
-	public AuthenticationManager authenticationManagerBean() throws Exception {
-		return super.authenticationManagerBean();
+		
+		httpSecurity.logout().logoutSuccessUrl("/authenticate").logoutUrl("/logout").permitAll();
 	}
 }

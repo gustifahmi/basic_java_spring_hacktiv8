@@ -39,7 +39,7 @@ public class JwtToken implements Serializable {
 	}
 	
 	private Claims getAllClaimsFromToken(String token) {
-		return Jwts.parser().setSigningKey(secret.getBytes()).parseClaimsJws(token).getBody();
+		return Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody();
 	}
 	
 	private Boolean isTokenExpired(String token) {
@@ -55,9 +55,9 @@ public class JwtToken implements Serializable {
 	}
 	
 	private String doGenerateToken(Map<String, Object> claims, String subject) {
-		return "Bearer" + Jwts.builder().setClaims(claims).setSubject(subject).
+		return "Bearer " + Jwts.builder().setClaims(claims).setSubject(subject).
 				setIssuedAt(new Date(System.currentTimeMillis())).
-				setExpiration(new Date(System.currentTimeMillis())).
+				setExpiration(new Date(System.currentTimeMillis() + JWT_TOKEN_VALIDITY * 1000)).
 				signWith(SignatureAlgorithm.HS512, secret).compact();
 	}
 	

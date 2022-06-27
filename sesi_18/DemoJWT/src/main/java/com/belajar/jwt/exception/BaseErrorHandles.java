@@ -10,7 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @ControllerAdvice
 @Slf4j
-public class BaseErrorHandler {
+public class BaseErrorHandles {
 
 	@ResponseBody
 	@ExceptionHandler(value = ValidationException.class)
