@@ -17,16 +17,9 @@ import com.belajar.jwt.model.JwtRequest;
 import com.belajar.jwt.model.JwtResponse;
 import com.belajar.jwt.service.JwtUserDetailsService;
 
-import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.media.Content;
-import io.swagger.v3.oas.annotations.media.Schema;
-import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import io.swagger.v3.oas.annotations.responses.ApiResponses;
-import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
 @CrossOrigin
-@Tag(name = "Authentication", description= "API for authenticate")
 public class AuthController {
 
 	@Autowired
