@@ -38,7 +38,6 @@ public class ProdukServiceImpl implements ProdukService {
 
 	//Menghapus satu produk berdasarkan id
 	public void deleteProduk(Long id) {
-		Produk produk = produkRepository.findById(id).orElse(new Produk());
 		produkRepository.deleteById(id);
 	}
 }

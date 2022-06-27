@@ -86,7 +86,7 @@ public class ProdukController {
 			produk.setId(id);
 			produkService.saveProduk(produk);
 			return new ResponseEntity<>("Produk dengan id=" + id + " berhasil diubah", HttpStatus.OK);
-		} catch (NoSuchElementException e) {
+		} catch(NoSuchElementException e) {
 			//Jika tidak ada produk dengan id tersebut
 			return new ResponseEntity<>("Produk dengan id=" + id + " tidak ditemukan", HttpStatus.NOT_FOUND);
 		}

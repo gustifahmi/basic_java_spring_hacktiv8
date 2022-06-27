@@ -45,4 +45,4 @@ dan password, lalu akan masuk halaman dari member.jsp
 
 Selanjutnya, saya juga belajar untuk membuat sebuah proyek Spring Boot. Untuk membuat sebuah
 proyek baru Spring Boot dapat dilakukan di web start.spring.io atau bisa juga melalui Eclipse.
-Saya memilih untuk membuat di Eclipse dengan klik File -> New -> Spring Starter Project
+Saya memilih untuk membuat di Eclipse dengan klik File -> New -> Spring Starter Project.
