@@ -3,6 +3,7 @@ Kode peserta: JVSB001ONL012
 Link Github: https://github.com/gustifahmi/basic_java_spring_hacktiv8
 
 Panduan penggunaan aplikasi:
+
 1. RataRataMaxMin.java (Latihan 1)
    Program menerima input 3 bilangan dari user, yaitu bilangan pertama (x), bilangan kedua (y),
    dan bilangan ketiga (z). Lalu tiga bilangan tersebut akan dimasukkan ke dalam suatu array.

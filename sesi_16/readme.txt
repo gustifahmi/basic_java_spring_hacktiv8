@@ -3,6 +3,7 @@ Kode peserta: JVSB001ONL012
 Link Github: https://github.com/gustifahmi/basic_java_spring_hacktiv8
 
 Panduan penggunaan aplikasi:
+
 Di sesi ini, saya belajar untuk menambahkan file html, script css dan bootstrap
 agar bisa menampilkan halaman untuk CRUD, sehingga CRUD-nya akan kita lakukan
 di halaman web yang dapat diakses di localhost ketimbang sesi sebelumnya yang

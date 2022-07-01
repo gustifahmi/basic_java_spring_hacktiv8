@@ -3,6 +3,7 @@ Kode peserta: JVSB001ONL012
 Link Github: https://github.com/gustifahmi/basic_java_spring_hacktiv8
 
 Panduan penggunaan aplikasi:
+
 Di sesi_15 ini saya belajar menggunakan JPA pada proyek Spring Boot. JPA ini bisa kita gunakan
 untuk mempermudah pengerjaan kita saat ingin melakukan perintah DDL yang terdiri dari insert, select,
 update, dan delete ke database. Dengan JPA, kita bisa melakukan perintah-perintah DDL dengan

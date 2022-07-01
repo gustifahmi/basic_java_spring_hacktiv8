@@ -3,6 +3,7 @@ Kode peserta: JVSB001ONL012
 Link Github: https://github.com/gustifahmi/basic_java_spring_hacktiv8
 
 Panduan penggunaan aplikasi:
+
 Di sesi 18 ini, saya mempelajari cara untuk authentication (autentikasi). Dengan autentikasi ini, kita bisa
 membatasi user untuk melakukan autentikasi atau dengan kata lain login terlebih dahulu sebelum
 mengakses beberapa API yang khusus untuk user yang sudah login.
