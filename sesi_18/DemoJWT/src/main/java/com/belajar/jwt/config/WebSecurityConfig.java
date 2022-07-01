@@ -36,12 +36,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	}
 
 	@Bean
-	public JwtAuthenticationEntryPoint jwtAuthenticationEntryPointBean() throws Exception {
+	JwtAuthenticationEntryPoint jwtAuthenticationEntryPointBean() throws Exception {
 		return new JwtAuthenticationEntryPoint();
 	}
 
 	@Bean
-	public PasswordEncoder passwordEncoder() {
+	PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
 
